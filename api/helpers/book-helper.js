@@ -129,24 +129,6 @@ class BookHelper {
     }
   }
 
-  async replaceBook(userId, oldIsbn, newIsbn, token) {
-    const response = await this.apiContext.put(`/BookStore/v1/Books/${oldIsbn}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      data: {
-        userId: userId,
-        isbn: newIsbn,
-      },
-    });
-
-    if (response.ok()) {
-      return await response.json();
-    }
-    
-    throw new Error('Failed to replace book');
-  }
-
   async dispose() {
     if (this.apiContext) {
       await this.apiContext.dispose();
