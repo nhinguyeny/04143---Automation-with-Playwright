@@ -34,7 +34,6 @@ Manages book store operations:
 - `addMultipleBooks(userId, isbnArray, token)` - Add multiple books
 - `deleteBook(userId, isbn, token)` - Delete specific book
 - `deleteAllBooks(userId, token)` - Delete all books from user's collection
-- `replaceBook(userId, oldIsbn, newIsbn, token)` - Replace a book
 
 ### API Configuration
 Located in `api/config/api-config.js`:
